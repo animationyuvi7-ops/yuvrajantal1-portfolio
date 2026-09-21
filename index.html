@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Editor. Content Creator. Builder.</title>
+  <meta name="description" content="Portfolio of Video Editor & Content Creator — specializing in high-retention Short Form edits and YouTube Informative videos." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="#work" class="nav-link">WORK</a>
+      <a href="#currently" class="nav-link">ABOUT</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-video-wrapper">
+        <video class="hero-video-bg" autoplay loop muted playsinline poster="./hero-poster.png">
+          <source src="./Vivo Y11 01_Trim 22.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Main Title with Typewriter Effect -->
+          <h1 class="hero-name" aria-label="YUVRAJ">
+            <span id="typewriter-target"></span><span class="typewriter-cursor" id="typewriter-cursor">|</span>
+          </h1>
+
+          <!-- Tagline Subtitle -->
+          <p class="hero-subtitle" id="hero-subtitle">
+            Video Editor &bull; Content Creator
+          </p>
+
+          <!-- Minimal CTA Group -->
+          <div class="hero-cta-group" id="hero-cta-group">
+            <a href="#work" class="btn-hero btn-hero-primary">WATCH MY WORK</a>
+            <a href="#contact" class="btn-hero btn-hero-secondary">CONTACT</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FEATURED WORK SHOWCASE -->
+    <section id="work" class="work-section">
+      <!-- Right-to-Left Continuous Marquee Ticker -->
+      <div class="marquee-ticker-wrapper">
+        <div class="marquee-ticker-track">
+          <div class="marquee-ticker-content">
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+          </div>
+          <div class="marquee-ticker-content" aria-hidden="true">
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+            <span>LEARN</span><span class="ticker-dot">•</span>
+            <span>BUILD</span><span class="ticker-dot">•</span>
+            <span>GROW</span><span class="ticker-dot">•</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Work Section Header -->
+        <div class="work-header">
+          <h2 class="work-title reveal-item">WORK</h2>
+          <p class="work-subtitle reveal-item">Selected projects &amp; creative work</p>
+        </div>
+
+        <!-- Wide Cinematic Video Showcase Container -->
+        <div class="work-showcase-wrapper reveal-item">
+          <div class="custom-video-player" id="work-video-player">
+            <video class="work-video" id="project-video-element" poster="assets/images/project-01-poster.png" preload="metadata" playsinline>
+              <source src="assets/videos/project-01.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Custom Bottom Video Controls Bar -->
+            <div class="custom-controls-bar" id="custom-controls-bar">
+              <button class="control-btn play-pause-btn" id="ctrl-play-btn" aria-label="Play/Pause">
+                <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                </svg>
+              </button>
+
+              <div class="video-progress-container" id="video-progress-container">
+                <div class="video-progress-fill" id="video-progress-fill"></div>
+              </div>
+
+              <span class="time-display" id="video-time-display">00:00 / 00:00</span>
+
+              <button class="control-btn mute-btn" id="ctrl-mute-btn" aria-label="Mute/Unmute">
+                <svg class="icon-volume" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                </svg>
+              </button>
+
+              <button class="control-btn fullscreen-btn" id="ctrl-fullscreen-btn" aria-label="Fullscreen">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Information Row -->
+        <div class="work-project-info reveal-item">
+          <div class="project-info-main">
+            <h3 class="project-title">01. CINEMATIC NARRATIVE &amp; EDUCATIONAL EDIT</h3>
+            <p class="project-desc">Cinematic storytelling, pacing, sound design and visual transitions.</p>
+          </div>
+          <div class="project-tags-list">
+            <span class="project-tag">Narrative &amp; Explainer</span>
+            <span class="project-tag">Kinetic Pacing</span>
+            <span class="project-tag">Sound Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CURRENTLY LIST -->
+    <section id="currently" class="currently-section">
+      <div class="container">
+        <h2 class="currently-title">CURRENTLY</h2>
+        <ul class="currently-list" id="currently-list-container">
+          <!-- Rendered via JS -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ABOUT ME SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="about-title">ABOUT ME</h2>
+        <div class="about-content-box">
+          <p class="about-paragraph about-p-highlight" style="--p-index: 0;">
+            Hi, I'm <span class="about-name-accent">Yuvraj</span> &mdash; a video editor focused on creating engaging, cinematic and story-driven content.
+          </p>
+          <p class="about-paragraph" style="--p-index: 1;">
+            I work with creators, businesses and brands to transform raw footage into videos that are clear, visually appealing and designed to keep viewers watching.
+          </p>
+          <p class="about-paragraph" style="--p-index: 2;">
+            My editing approach combines storytelling, pacing, clean motion graphics, sound design and attention to detail.
+          </p>
+          <p class="about-paragraph" style="--p-index: 3;">
+            Whether it's a YouTube video, documentary, talking-head video or short-form content, my goal is simple:
+          </p>
+          <blockquote class="about-quote" style="--p-index: 4;">
+            &ldquo;Make every second of the video worth watching.&rdquo;
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        
+        <!-- Giant Header -->
+        <h2 class="contact-giant-header">
+          LET'S BUILD<br />SOMETHING.
+        </h2>
+
+        <!-- Contact Columns -->
+        <div class="contact-columns">
+          
+          <!-- Left Column: Email -->
+          <div class="email-block">
+            <span class="email-label">EMAIL</span>
+            <a href="mailto:animationyuvi7@gmail.com" class="email-value" id="contact-email">
+              animationyuvi7@gmail.com
+            </a>
+          </div>
+
+          <!-- Right Column: Social Links -->
+          <div class="social-table" id="social-table-container">
+            <!-- Rendered via JS -->
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-row">
+          <p class="footer-copyright">© 2026 Yuvraj Antal. All rights reserved.</p>
+          <div class="footer-creativity-typewriter" id="footer-creativity-box">
+            <span id="footer-typewriter-text"></span><span class="footer-typewriter-cursor">|</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="./main.js"></script>
+</body>
+</html>
